@@ -1,10 +1,17 @@
 :root{
    --yellow: #db9d0b;
+   --black: #000000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #scrbutton {
     background-color: var(--yellow);
-    color: #000000;
+    color: var(--black);
     font-size: 20px;
     font-family: cursive;
     padding: 10px 50px;
@@ -12,11 +19,22 @@
 }
 
 #scrbutton:hover {
-    box-shadow:  0 0 5px #000000;
+    box-shadow:  0 0 5px var(--black);
 }
 
 #scrbutton:active {
     background-color: #ffffff;
+}
+
+#timer {
+    display: inline;
+    background-color: var(--yellow);
+    color: var(--black);
+    font-size: 20px;
+    font-family: cursive;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid var(--black);
 }
 
 main {
@@ -34,7 +52,7 @@ span {
 }
 
 em {
-    color: red;
+    color: #d91002;
 }
 
 p {
@@ -43,7 +61,7 @@ p {
 
 #strbutton {
     background-color: var(--yellow);
-    color: #000000;
+    color: var(--black);
     font-size: 20px;
     font-family: cursive;
     padding: 10px 50px;
@@ -51,9 +69,31 @@ p {
 }
 
 #strbutton:hover {
-    box-shadow:  0 0 5px #000000;
+    box-shadow:  0 0 5px var(--black);
 }
 
 #strbutton:active {
+    background-color: #ffffff;
+}
+
+#question {
+    font-size: 30px;
+    font-family: cursive;
+}
+
+#choice {
+    background-color: var(--yellow);
+    color: var(--black);
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px 10px;
+    border-radius: 20px; 
+}
+
+#choice:hover {
+    box-shadow:  0 0 5px var(--black);
+}
+
+#choice:active {
     background-color: #ffffff;
 }

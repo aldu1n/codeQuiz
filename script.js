@@ -4,6 +4,7 @@ var startButton = document.getElementById("strbutton");
 var navEl = document.querySelector("nav");
 var titleEl = document.getElementById("title-text");
 var textEl = document.getElementById("inst-text");
+var scoreButton = document.getElementById("scrbutton");
 
 var timeLeft = 60;
 
@@ -38,12 +39,35 @@ function showQuestion(){
   question.textContent = question1[0];
   question.setAttribute('id', 'question');
   mainEl.appendChild(question);
-for (let i = 1; i < question1.length; i++) {
+for (var i = 1; i < question1.length; i++) {
     var choice = document.createElement("button");
     choice.setAttribute('id', 'choice');
     choice.textContent = question1[i];
     mainEl.appendChild(choice);
-  }
+}
+    choice.addEventListener('click', function(){
+        question.remove();
+        for (var i = 1; i < question1.length; i++){
+            var removeChild = document.getElementById('choice');
+            removeChild.remove();
+           }
+
+           nextQuestion();
+        }
+      )
+    }
+
+function nextQuestion(){
+    var question = document.createElement("p");
+    question.textContent = question2[0];
+    question.setAttribute('id', 'question');
+    mainEl.appendChild(question);
+  for (let i = 1; i < question2.length; i++) {
+      var choice = document.createElement("button");
+      choice.setAttribute('id', 'choice');
+      choice.textContent = question2[i];
+      mainEl.appendChild(choice);
+}
 }
 
 
@@ -62,14 +86,11 @@ var question1 = [
 ];
 
 var question2 = [
-    {
-        question: "Which JavaScript function is used to print content to the console?",
-        choiceA: "console.log()",//correct
-        choiceB: "print()",
-        choiceC: "output()",
-        choiceD: "display()"
-
-    }
+        "Which JavaScript function is used to print content to the console?",
+        "a. console.log()",//correct
+        "b. print()",
+        "c. output()",
+        "d. display()"
 ];
 
 var question3 = [

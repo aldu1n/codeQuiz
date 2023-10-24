@@ -10,7 +10,7 @@ var timeLeft = 60;
 
 function startQuiz(){
     var time = document.createElement("p");
-    time.textContent = 60;
+    time.textContent = timeLeft;
     time.setAttribute('id','timer');
     navEl.appendChild(time);
     
@@ -18,7 +18,7 @@ function startQuiz(){
     startButton.remove();
     textEl.remove();
 
-    showQuestion()
+    showQuestion(question1);
     
     var timer = setInterval(function() {
         timeLeft--;
@@ -32,45 +32,81 @@ function startQuiz(){
 
 }
 
-
-
-function showQuestion(){
+function showQuestion(item){
   var question = document.createElement("p");
-  question.textContent = question1[0];
+  question.textContent = item[0];
   question.setAttribute('id', 'question');
   mainEl.appendChild(question);
-for (var i = 1; i < question1.length; i++) {
+  var questionDiv = document.createElement("div");
+  questionDiv.setAttribute('id', 'question-div');
+  mainEl.appendChild(questionDiv);
+for (var i = 1; i < item.length; i++) {
     var choice = document.createElement("button");
-    choice.setAttribute('id', 'choice');
-    choice.textContent = question1[i];
-    mainEl.appendChild(choice);
+    choice.setAttribute('class', 'choice');
+    choice.textContent = item[i];
+    questionDiv.appendChild(choice);
 }
-    choice.addEventListener('click', function(){
-        question.remove();
-        for (var i = 1; i < question1.length; i++){
-            var removeChild = document.getElementById('choice');
-            removeChild.remove();
-           }
-
-           nextQuestion();
+    questionDiv.addEventListener('click', function(event){
+        var element = event.target;
+        switch (item){
+            case question1: if (element.matches('.choice')){
+                question.remove();
+                showQuestion(question2);
+                for (var i = 0; i < 5; i++){
+                    questionDiv.removeChild(questionDiv.firstChild);
+                }
+            }
+            break;
+            case question2: if (element.matches('.choice')){
+                question.remove();
+                showQuestion(question3);
+                for (var i = 0; i < 5; i++){
+                    questionDiv.removeChild(questionDiv.firstChild);
+                }
+            }
+            break;
+            case question3: if (element.matches('.choice')){
+                question.remove();
+                showQuestion(question4);
+                for (var i = 0; i < 5; i++){
+                    questionDiv.removeChild(questionDiv.firstChild);
+                }
+            }
+            break;
+            case question4: if (element.matches('.choice')){
+                question.remove();
+                showQuestion(question5);
+                for (var i = 0; i < 5; i++){
+                    questionDiv.removeChild(questionDiv.firstChild);
+                }
+            }
+            break;
+            case question5: if (element.matches('.choice')){
+                question.remove();
+                showScore();
+                for (var i = 0; i < 5; i++){
+                    questionDiv.removeChild(questionDiv.firstChild);
+                }
+            }
+            break;
         }
-      )
-    }
-
-function nextQuestion(){
-    var question = document.createElement("p");
-    question.textContent = question2[0];
-    question.setAttribute('id', 'question');
-    mainEl.appendChild(question);
-  for (let i = 1; i < question2.length; i++) {
-      var choice = document.createElement("button");
-      choice.setAttribute('id', 'choice');
-      choice.textContent = question2[i];
-      mainEl.appendChild(choice);
-}
+    })
 }
 
-
+function showScore(){
+    var scoreHeader = document.createElement("h2");
+    scoreHeader.textContent = "Your score is:"
+    scoreHeader.setAttribute('id', 'score-header');
+    mainEl.appendChild(scoreHeader);
+    var score = document.createElement("p");
+    score.textContent = timeLeft;
+    score.setAttribute('id', 'score');
+    mainEl.appendChild(score);
+    var submitScore = document.createElement('button');
+    submitScore.textContent = "Save my score";
+    submitScore.setAttribute('id', 'submit-score');
+    mainEl.appendChild(submitScore);
+}
 
 
 startButton.addEventListener('click', startQuiz)
@@ -94,88 +130,25 @@ var question2 = [
 ];
 
 var question3 = [
-    {
-        question: "Which of the following is NOT a valid way to declare a JavaScript variable?",
-        choiceA: "var x;",
-        choiceB: "let y;",
-        choiceC: "const z;",
-        choiceD: "variable w;"//correct
-
-    }
+         "Which of the following is NOT a valid way to declare a JavaScript variable?",
+         "var x;",
+         "let y;",
+         "const z;",
+         "variable w;"//correct
 ];
 
 var question4 = [
-    {
-        question: `What does the term "DOM" stand for in JavaScript?`,
-        choiceA: "Document Object Model",//correct
-        choiceB: "Data Object Management",
-        choiceC: "Dynamic Object Manipulation",
-        choiceD: "Digital Output Mode"
-
-    }
+        `What does the term "DOM" stand for in JavaScript?`,
+        "Document Object Model",//correct
+        "Data Object Management",
+        "Dynamic Object Manipulation",
+        "Digital Output Mode" 
 ];
 
 var question5 = [
-    {
-        question: "Which operator is used for comparing both value and data type in JavaScript?",
-        choiceA: "==",
-        choiceB: "===",//correct
-        choiceC: "=",
-        choiceD: "!=="
-
-    }
+        "Which operator is used for comparing both value and data type in JavaScript?",
+        "==",
+        "===",//correct
+        "=",
+        "!=="
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var question1 = [
-//     {
-//         question: "What is JavaScript primarily used for in web development?",
-//         choiceA: "Styling web pages",
-//         choiceB: "Providing structural information",
-//         choiceC: "Enhancing interactivity",//corect
-//         choiceD: "Managing server databases"
-
-//     }
-// ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var questionArr = [
-//   {
-//     question: "What is this question?",
-//     answer: "a question",
-//     choiceA: "an answer",
-//     choiceB: "a question"
-//   }
-// ]
-// var q = 0;
-// function showQuestion(){
-//   console.log(questionArr[q]);
-// }
-// showQuestion();

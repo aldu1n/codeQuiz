@@ -105,7 +105,7 @@ em {
     background-color: red;
 }
 
-#correct:active {
+#b:active,#c:active,#d:active,#e:active {
     background-color: green;
 }
 

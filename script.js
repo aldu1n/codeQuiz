@@ -32,7 +32,10 @@ function startQuiz(){
 
 }
 
+
 startButton.addEventListener('click', startQuiz)
+
+
 
 function showQuestion(item){
   var question = document.createElement("p");
@@ -44,14 +47,26 @@ function showQuestion(item){
   mainEl.appendChild(questionDiv);
 for (var i = 1; i < item.length; i++) {
     var choice = document.createElement("button");
-    choice.setAttribute('class', 'choice');
     choice.textContent = item[i];
+    choice.setAttribute('class', 'choice');
+    var questData = ['a','b','c','d','e'];
+    choice.setAttribute('id', questData[i])
     questionDiv.appendChild(choice);
 }
     questionDiv.addEventListener('click', function(event){
         var element = event.target;
+        var state = choice.getAttribute("data-answer");
+        console.log(state);
         switch (item){
-            case question1: if (element.matches('.choice')){
+            case question1:
+                if (element.matches('.choice') && element.matches('#d')){
+                     question.remove();
+                     showQuestion(question2);
+                     for (var i = 0; i < 5; i++){
+                         questionDiv.removeChild(questionDiv.firstChild);
+                     }
+                 }
+                else if (element.matches('.choice')){
                 timeLeft -= 10;
                 question.remove();
                 showQuestion(question2);
@@ -60,60 +75,146 @@ for (var i = 1; i < item.length; i++) {
                 }
             }
             break;
-            case question2: if (element.matches('.choice')){
-                timeLeft -= 10;
-                question.remove();
-                showQuestion(question3);
-                for (var i = 0; i < 5; i++){
-                    questionDiv.removeChild(questionDiv.firstChild);
+            case question2:
+                if (element.matches('.choice') && element.matches('#b')){
+                    question.remove();
+                    showQuestion(question3);
+                    for (var i = 0; i < 5; i++){
+                        questionDiv.removeChild(questionDiv.firstChild);
+                    }
                 }
-            }
+               else if (element.matches('.choice')){
+               timeLeft -= 10;
+               question.remove();
+               showQuestion(question3);
+               for (var i = 0; i < 5; i++){
+                   questionDiv.removeChild(questionDiv.firstChild);
+               }
+           }
             break;
-            case question3: if (element.matches('.choice')){
-                timeLeft -= 10;
-                question.remove();
-                showQuestion(question4);
-                for (var i = 0; i < 5; i++){
-                    questionDiv.removeChild(questionDiv.firstChild);
+            case question3:
+                if (element.matches('.choice') && element.matches('#e')){
+                    question.remove();
+                    showQuestion(question4);
+                    for (var i = 0; i < 5; i++){
+                        questionDiv.removeChild(questionDiv.firstChild);
+                    }
                 }
-            }
+               else if (element.matches('.choice')){
+               timeLeft -= 10;
+               question.remove();
+               showQuestion(question4);
+               for (var i = 0; i < 5; i++){
+                   questionDiv.removeChild(questionDiv.firstChild);
+               }
+           }
             break;
-            case question4: if (element.matches('.choice')){
-                timeLeft -= 10;
-                question.remove();
-                showQuestion(question5);
-                for (var i = 0; i < 5; i++){
-                    questionDiv.removeChild(questionDiv.firstChild);
+            case question4:
+                if (element.matches('.choice') && element.matches('#b')){
+                    question.remove();
+                    showQuestion(question5);
+                    for (var i = 0; i < 5; i++){
+                        questionDiv.removeChild(questionDiv.firstChild);
+                    }
                 }
-            }
+               else if (element.matches('.choice')){
+               timeLeft -= 10;
+               question.remove();
+               showQuestion(question5);
+               for (var i = 0; i < 5; i++){
+                   questionDiv.removeChild(questionDiv.firstChild);
+               }
+           }
             break;
-            case question5: if (element.matches('.choice')){
-                timeLeft -= 10;
-                question.remove();
-                showScore();
-                for (var i = 0; i < 5; i++){
-                    questionDiv.removeChild(questionDiv.firstChild);
+            case question5:
+                if (element.matches('.choice') && element.matches('#c')){
+                    question.remove();
+                    showScore();
+                    for (var i = 0; i < 5; i++){
+                        questionDiv.removeChild(questionDiv.firstChild);
+                    }
                 }
-            }
+               else if (element.matches('.choice')){
+               timeLeft -= 10;
+               question.remove();
+               showScore();
+               for (var i = 0; i < 5; i++){
+                   questionDiv.removeChild(questionDiv.firstChild);
+               }
+           }
             break;
         }
     })
 }
 
+
+
 function showScore(){
     var scoreHeader = document.createElement("h2");
-    scoreHeader.textContent = "Your score is:"
+    scoreHeader.textContent = "Your score is :";
     scoreHeader.setAttribute('id', 'score-header');
     mainEl.appendChild(scoreHeader);
-    var score = document.createElement("p");
-    score.textContent = timeLeft;
-    score.setAttribute('id', 'score');
-    mainEl.appendChild(score);
+    var finalScore = document.createElement("p");
+    finalScore.textContent = timeLeft;
+    finalScore.setAttribute('id', 'score');
+    mainEl.appendChild(finalScore);
     var submitScore = document.createElement('button');
     submitScore.textContent = "Save my score";
     submitScore.setAttribute('id', 'submit-score');
     mainEl.appendChild(submitScore);
+
+
+    submitScore.addEventListener('click', function(){
+        submitScore.remove();
+        var userNameInput = document.createElement('input');
+        userNameInput.setAttribute('type', 'text');
+        userNameInput.setAttribute("id", "input");
+        userNameInput.setAttribute('placeholder', 'Enter your name')
+        mainEl.appendChild(userNameInput);
+
+        
+        var submitUserName = document.createElement('button');
+        submitUserName.textContent = "Save my score!";
+        submitUserName.setAttribute('id', 'submit-username');
+        mainEl.appendChild(submitUserName);
+
+        submitUserName.addEventListener('click', function(){
+            var userName = userNameInput.value
+            var score = parseInt(finalScore.textContent);
+            localStorage.setItem('highscore', userName, score);
+            // location.reload()
+            var x = localStorage.getItem('highscore', userName, score)
+            console.log(x)
+            var scoresUl = document.createElement('ul')
+            mainEl.appendChild(scoresUl);
+
+                var scoresLi = document.createElement('li');
+                scoresLi.textContent = (userName, score);
+                scoresUl.appendChild(scoresLi);
+        })
+    });
+    
 }
+
+
+// scoreButton.addEventListener('click', function(){
+//     titleEl.remove();
+//     startButton.remove();
+//     textEl.remove();
+
+
+//     var scoresUl = document.createElement('ul')
+//     mainEl.appendChild(scoresUl);
+
+//     for (var i = 0; i > userName.length; i++){
+//         var scoresLi = document.createElement('li');
+//         scoresLi.textContent = userName;
+//         scoresUl.appendChild(scoresLi);
+
+//     }
+
+// })
+
 
 
 // Question Arrays
@@ -121,7 +222,7 @@ var question1 = [
         "What is JavaScript primarily used for in web development?",
         "a. Styling web pages",
         "b. Providing structural information",
-        "c. Enhancing interactivity",//corect
+        "c. Enhancing interactivity",
         "d. Managing server databases"
 ];
 

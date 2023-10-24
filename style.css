@@ -45,6 +45,10 @@ main {
     min-height: 40vh;
 }
 
+main h1 {
+    font-size: 50px;
+}
+
 span {
     color: var(--yellow);
 }
@@ -53,8 +57,9 @@ em {
     color: #d91002;
 }
 
-p {
-    font-size: 20px;
+#inst-text {
+    font-size: 25px;
+    margin: 100px 0;
 }
 
 #strbutton {

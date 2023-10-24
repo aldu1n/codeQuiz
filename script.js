@@ -32,6 +32,8 @@ function startQuiz(){
 
 }
 
+startButton.addEventListener('click', startQuiz)
+
 function showQuestion(item){
   var question = document.createElement("p");
   question.textContent = item[0];
@@ -50,6 +52,7 @@ for (var i = 1; i < item.length; i++) {
         var element = event.target;
         switch (item){
             case question1: if (element.matches('.choice')){
+                timeLeft -= 10;
                 question.remove();
                 showQuestion(question2);
                 for (var i = 0; i < 5; i++){
@@ -58,6 +61,7 @@ for (var i = 1; i < item.length; i++) {
             }
             break;
             case question2: if (element.matches('.choice')){
+                timeLeft -= 10;
                 question.remove();
                 showQuestion(question3);
                 for (var i = 0; i < 5; i++){
@@ -66,6 +70,7 @@ for (var i = 1; i < item.length; i++) {
             }
             break;
             case question3: if (element.matches('.choice')){
+                timeLeft -= 10;
                 question.remove();
                 showQuestion(question4);
                 for (var i = 0; i < 5; i++){
@@ -74,6 +79,7 @@ for (var i = 1; i < item.length; i++) {
             }
             break;
             case question4: if (element.matches('.choice')){
+                timeLeft -= 10;
                 question.remove();
                 showQuestion(question5);
                 for (var i = 0; i < 5; i++){
@@ -82,6 +88,7 @@ for (var i = 1; i < item.length; i++) {
             }
             break;
             case question5: if (element.matches('.choice')){
+                timeLeft -= 10;
                 question.remove();
                 showScore();
                 for (var i = 0; i < 5; i++){
@@ -107,9 +114,6 @@ function showScore(){
     submitScore.setAttribute('id', 'submit-score');
     mainEl.appendChild(submitScore);
 }
-
-
-startButton.addEventListener('click', startQuiz)
 
 
 // Question Arrays

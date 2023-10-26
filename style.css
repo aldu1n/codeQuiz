@@ -1,6 +1,8 @@
 :root{
    --yellow: #db9d0b;
    --black: #000000;
+   --red: #d91002;
+   --white: #ffffff;
 }
 
 nav {
@@ -9,7 +11,12 @@ nav {
     justify-content: space-between;
 }
 
-#scrbutton {
+#scrbutton,
+#strbutton,
+#submit-score,
+#submit-username,
+#start-over,
+.choice {
     background-color: var(--yellow);
     color: var(--black);
     font-size: 20px;
@@ -17,12 +24,23 @@ nav {
     border-radius: 20px;
 }
 
-#scrbutton:hover {
+#scrbutton:hover,
+#strbutton:hover,
+#submit-score:hover,
+#submit-username:hover,
+#name-input:hover, 
+#start-over:hover,
+.choice:hover {
     box-shadow:  0 0 5px var(--black);
 }
 
-#scrbutton:active {
-    background-color: #ffffff;
+#scrbutton:active, 
+#strbutton:active,
+#submit-score:active,
+#submit-username:active,
+#start-over:active, 
+.choice:active  {
+    background-color: var(--white);
 }
 
 #timer {
@@ -54,28 +72,12 @@ span {
 }
 
 em {
-    color: #d91002;
+    color: var(--red);
 }
 
 #inst-text {
     font-size: 25px;
     margin: 100px 0;
-}
-
-#strbutton {
-    background-color: var(--yellow);
-    color: var(--black);
-    font-size: 20px;
-    padding: 10px 50px;
-    border-radius: 20px;
-}
-
-#strbutton:hover {
-    box-shadow:  0 0 5px var(--black);
-}
-
-#strbutton:active {
-    background-color: #ffffff;
 }
 
 #question {
@@ -89,24 +91,7 @@ em {
 }
 
 .choice {
-    background-color: var(--yellow);
-    color: var(--black);
-    font-size: 20px;
     margin: 5px;
-    padding: 10px 10px;
-    border-radius: 20px; 
-}
-
-.choice:hover {
-    box-shadow:  0 0 5px var(--black);
-}
-
-.choice:active {
-    background-color: red;
-}
-
-#b:active,#c:active,#d:active,#e:active {
-    background-color: green;
 }
 
 #score-header {
@@ -120,18 +105,37 @@ em {
     color: var(--yellow);
 }
 
-#submit-score {
-    background-color: var(--yellow);
+#name-input{
+  text-align: center;
+  width: 20%;
+  border: 0;
+  border-bottom: 2px solid var(--black);
+  border-radius: 20px;
+  font-size: 20px;
+  color: var(--black);
+  padding: 7px 0;
+  background-color: var(--yellow);
+  margin-bottom: 20px;
+}
+#name-input::placeholder {
+    text-align: center;
     color: var(--black);
+  }
+
+#username-text {
     font-size: 20px;
-    padding: 10px 50px;
+    background-color: var(--yellow);
+    padding: 10px;
+    border: 2px solid var(--black);
     border-radius: 20px;
+}  
+
+#username-success{
+    font-size: 20px;
+    color: green;
 }
 
-#submit-score:hover {
-    box-shadow:  0 0 5px var(--black);
-}
-
-#submit-score:active {
-    background-color: #ffffff;
+#username-fail{
+    font-size: 20px;
+    color: red;
 }

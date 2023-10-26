@@ -5,6 +5,7 @@ var navEl = document.querySelector("nav");
 var titleEl = document.getElementById("title-text");
 var textEl = document.getElementById("inst-text");
 var scoreButton = document.getElementById("scrbutton");
+var questionDiv = document.createElement("div");
 
 var timeLeft = 60;
 
@@ -168,7 +169,7 @@ function showScore(){
         submitScore.remove();
         var userNameInput = document.createElement('input');
         userNameInput.setAttribute('type', 'text');
-        userNameInput.setAttribute("id", "input");
+        userNameInput.setAttribute("id", "name-input");
         userNameInput.setAttribute('placeholder', 'Enter your name')
         mainEl.appendChild(userNameInput);
 
@@ -179,41 +180,80 @@ function showScore(){
         mainEl.appendChild(submitUserName);
 
         submitUserName.addEventListener('click', function(){
-            var userName = userNameInput.value
+            var userName = userNameInput.value;
             var score = parseInt(finalScore.textContent);
-            localStorage.setItem('highscore', userName, score);
-            // location.reload()
-            var x = localStorage.getItem('highscore', userName, score)
-            console.log(x)
-            var scoresUl = document.createElement('ul')
-            mainEl.appendChild(scoresUl);
 
-                var scoresLi = document.createElement('li');
-                scoresLi.textContent = (userName, score);
-                scoresUl.appendChild(scoresLi);
+            if (userName == ""){
+                var scoresPElFail = document.createElement('p');
+                scoresPElFail.textContent = "Username cannot be empty!";
+                scoresPElFail.setAttribute('id', 'username-fail');
+                mainEl.appendChild(scoresPElFail);
+                var failTime = 3;
+                var timer = setInterval(function() {
+                    failTime--;
+                    if(failTime === 0) {
+                        scoresPElFail.remove();
+                    }
+                }, 1000);
+                setInterval(timer)
+            
+            }
+            else {   
+                
+                
+                localStorage.setItem('username', userName);
+                localStorage.setItem('score', score);
+ 
+                var userNameSuccess = document.createElement('p');
+                userNameSuccess.setAttribute('id', 'username-success');
+                userNameSuccess.textContent = "Highscore succesfully registered!";
+                mainEl.appendChild(userNameSuccess);
+
+                var startOverBtn = document.createElement('button');
+                startOverBtn.textContent = "Start Over!";
+                startOverBtn.setAttribute('id', 'start-over');
+                mainEl.appendChild(startOverBtn);
+            }
+
+            startOverBtn.addEventListener('click', function(){
+                location.reload();
+            })
+            
         })
     });
     
 }
 
 
-// scoreButton.addEventListener('click', function(){
-//     titleEl.remove();
-//     startButton.remove();
-//     textEl.remove();
+scoreButton.addEventListener('click', function(){
+       mainEl.remove();
+
+       var getUsername =localStorage.getItem('username');
+       var getScore = localStorage.getItem('score');
+
+    var scoresHEl = document.createElement('h1');
+    scoresHEl.textContent = 'Saved Highscores'
+    rootEl.appendChild(scoresHEl);
+
+    
+    var highscoreEl = document.createElement('p');
+    highscoreEl.setAttribute('id', 'highscore-text');
+    highscoreEl.textContent = getUsername + ' - ' + getScore;
+    rootEl.appendChild(highscoreEl);
 
 
-//     var scoresUl = document.createElement('ul')
-//     mainEl.appendChild(scoresUl);
+    var exitBtn = document.createElement('button');
+    exitBtn.textContent = "Return";
+    exitBtn.setAttribute('id', 'return-btn');
+    rootEl.appendChild(exitBtn);
 
-//     for (var i = 0; i > userName.length; i++){
-//         var scoresLi = document.createElement('li');
-//         scoresLi.textContent = userName;
-//         scoresUl.appendChild(scoresLi);
+    exitBtn.addEventListener('click', function(){
+        location.reload();
+    })
+    // for (var i = 0; i < localStorage.length; i++){
+    // }
 
-//     }
-
-// })
+})
 
 
 
@@ -228,7 +268,7 @@ var question1 = [
 
 var question2 = [
         "Which JavaScript function is used to print content to the console?",
-        "a. console.log()",//correct
+        "a. console.log()",
         "b. print()",
         "c. output()",
         "d. display()"
@@ -239,12 +279,12 @@ var question3 = [
          "var x;",
          "let y;",
          "const z;",
-         "variable w;"//correct
+         "variable w;"
 ];
 
 var question4 = [
         `What does the term "DOM" stand for in JavaScript?`,
-        "Document Object Model",//correct
+        "Document Object Model",
         "Data Object Management",
         "Dynamic Object Manipulation",
         "Digital Output Mode" 
@@ -253,7 +293,7 @@ var question4 = [
 var question5 = [
         "Which operator is used for comparing both value and data type in JavaScript?",
         "==",
-        "===",//correct
+        "===",
         "=",
         "!=="
 ];

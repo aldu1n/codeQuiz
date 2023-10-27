@@ -24,7 +24,6 @@ nav {
     border-radius: 20px;
 }
 
-#scrbutton:hover,
 #strbutton:hover,
 #submit-score:hover,
 #submit-username:hover,
@@ -34,13 +33,16 @@ nav {
     box-shadow:  0 0 5px var(--black);
 }
 
-#scrbutton:active, 
 #strbutton:active,
 #submit-score:active,
 #submit-username:active,
 #start-over:active, 
 .choice:active  {
     background-color: var(--white);
+}
+
+#scrbutton {
+    border: 2px solid var(--black);
 }
 
 #timer {
@@ -130,12 +132,14 @@ em {
     border-radius: 20px;
 }  
 
-#username-success{
+#username-success,
+#correct-answer {
     font-size: 20px;
     color: green;
 }
 
-#username-fail{
+#username-fail,
+#wrong-answer {
     font-size: 20px;
     color: red;
 }

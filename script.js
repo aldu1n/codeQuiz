@@ -4,7 +4,7 @@ var startButton = document.getElementById("strbutton");
 var navEl = document.querySelector("nav");
 var titleEl = document.getElementById("title-text");
 var textEl = document.getElementById("inst-text");
-var scoreButton = document.getElementById("scrbutton");
+var scoreText = document.getElementById("scrbutton");
 var questionDiv = document.createElement("div");
 
 var timeLeft = 60;
@@ -61,87 +61,211 @@ for (var i = 1; i < item.length; i++) {
         switch (item){
             case question1:
                 if (element.matches('.choice') && element.matches('#d')){
-                     question.remove();
-                     showQuestion(question2);
-                     for (var i = 0; i < 5; i++){
-                         questionDiv.removeChild(questionDiv.firstChild);
-                     }
+                    var correctAnswer = document.createElement("p");
+                    correctAnswer.textContent = "Correct!";
+                    correctAnswer.setAttribute('id', 'correct-answer');
+                    questionDiv.appendChild(correctAnswer);
+
+                    var questionTime = 1;
+                    var timer = setInterval(function() {
+                    questionTime--;
+                    if(questionTime === 0) {
+                        question.remove();
+                        showQuestion(question2);
+                        for (var i = 0; i < 5; i++){
+                            questionDiv.removeChild(questionDiv.firstChild);
+                        }
+                    }
+                }, 300);
+                setInterval(timer)
                  }
+
                 else if (element.matches('.choice')){
-                timeLeft -= 10;
-                question.remove();
-                showQuestion(question2);
-                for (var i = 0; i < 5; i++){
-                    questionDiv.removeChild(questionDiv.firstChild);
-                }
+                    var wrongAnswer = document.createElement("p");
+                    wrongAnswer.textContent = "Wrong!";
+                    wrongAnswer.setAttribute('id', 'wrong-answer');
+                    questionDiv.appendChild(wrongAnswer);
+
+                    var questionTime = 1;
+                    var timer = setInterval(function() {
+                    questionTime--;
+                    if(questionTime === 0) {
+                        timeLeft -= 10;
+                        question.remove();
+                        showQuestion(question2);
+                        for (var i = 0; i < 5; i++){
+                            questionDiv.removeChild(questionDiv.firstChild);
+                        }
+                    }
+                }, 300);
+                setInterval(timer)
             }
             break;
             case question2:
                 if (element.matches('.choice') && element.matches('#b')){
+                    var correctAnswer = document.createElement("p");
+                    correctAnswer.textContent = "Correct!";
+                    correctAnswer.setAttribute('id', 'correct-answer');
+                    questionDiv.appendChild(correctAnswer);
+
+                    var questionTime = 1;
+                    var timer = setInterval(function() {
+                    questionTime--;
+                    if(questionTime === 0) {
+                        question.remove();
+                        showQuestion(question3);
+                        for (var i = 0; i < 5; i++){
+                            questionDiv.removeChild(questionDiv.firstChild);
+                        }
+                    }
+                }, 300);
+                setInterval(timer)
+                }
+
+               else if (element.matches('.choice')){
+                var wrongAnswer = document.createElement("p");
+                wrongAnswer.textContent = "Wrong!";
+                wrongAnswer.setAttribute('id', 'wrong-answer');
+                questionDiv.appendChild(wrongAnswer);
+
+                var questionTime = 1;
+                var timer = setInterval(function() {
+                questionTime--;
+                if(questionTime === 0) {
+                    timeLeft -= 10;
                     question.remove();
                     showQuestion(question3);
                     for (var i = 0; i < 5; i++){
                         questionDiv.removeChild(questionDiv.firstChild);
                     }
                 }
-               else if (element.matches('.choice')){
-               timeLeft -= 10;
-               question.remove();
-               showQuestion(question3);
-               for (var i = 0; i < 5; i++){
-                   questionDiv.removeChild(questionDiv.firstChild);
-               }
+            }, 300);
+            setInterval(timer)
            }
             break;
             case question3:
                 if (element.matches('.choice') && element.matches('#e')){
+                    var correctAnswer = document.createElement("p");
+                    correctAnswer.textContent = "Correct!";
+                    correctAnswer.setAttribute('id', 'correct-answer');
+                    questionDiv.appendChild(correctAnswer);
+
+                    var questionTime = 1;
+                    var timer = setInterval(function() {
+                    questionTime--;
+                    if(questionTime === 0) {
+                        question.remove();
+                        showQuestion(question4);
+                        for (var i = 0; i < 5; i++){
+                            questionDiv.removeChild(questionDiv.firstChild);
+                        }
+                    }
+                }, 300);
+                setInterval(timer)
+                }
+
+               else if (element.matches('.choice')){
+                var wrongAnswer = document.createElement("p");
+                wrongAnswer.textContent = "Wrong!";
+                wrongAnswer.setAttribute('id', 'wrong-answer');
+                questionDiv.appendChild(wrongAnswer);
+
+                var questionTime = 1;
+                var timer = setInterval(function() {
+                questionTime--;
+                if(questionTime === 0) {
+                    timeLeft -= 10;
                     question.remove();
                     showQuestion(question4);
                     for (var i = 0; i < 5; i++){
                         questionDiv.removeChild(questionDiv.firstChild);
                     }
                 }
-               else if (element.matches('.choice')){
-               timeLeft -= 10;
-               question.remove();
-               showQuestion(question4);
-               for (var i = 0; i < 5; i++){
-                   questionDiv.removeChild(questionDiv.firstChild);
-               }
+            }, 300);
+            setInterval(timer)
            }
             break;
             case question4:
                 if (element.matches('.choice') && element.matches('#b')){
+                    var correctAnswer = document.createElement("p");
+                    correctAnswer.textContent = "Correct!";
+                    correctAnswer.setAttribute('id', 'correct-answer');
+                    questionDiv.appendChild(correctAnswer);
+                    var questionTime = 1;
+                    var timer = setInterval(function() {
+                    questionTime--;
+                    if(questionTime === 0) {
+                        question.remove();
+                        showQuestion(question5);
+                        for (var i = 0; i < 5; i++){
+                            questionDiv.removeChild(questionDiv.firstChild);
+                        }
+                    }
+                }, 300);
+                setInterval(timer)
+                }
+
+               else if (element.matches('.choice')){
+                var wrongAnswer = document.createElement("p");
+                wrongAnswer.textContent = "Wrong!";
+                wrongAnswer.setAttribute('id', 'wrong-answer');
+                questionDiv.appendChild(wrongAnswer);
+
+                var questionTime = 1;
+                var timer = setInterval(function() {
+                questionTime--;
+                if(questionTime === 0) {
+                    timeLeft -= 10;
                     question.remove();
                     showQuestion(question5);
                     for (var i = 0; i < 5; i++){
                         questionDiv.removeChild(questionDiv.firstChild);
                     }
                 }
-               else if (element.matches('.choice')){
-               timeLeft -= 10;
-               question.remove();
-               showQuestion(question5);
-               for (var i = 0; i < 5; i++){
-                   questionDiv.removeChild(questionDiv.firstChild);
-               }
+            }, 300);
+            setInterval(timer)
            }
             break;
             case question5:
                 if (element.matches('.choice') && element.matches('#c')){
-                    question.remove();
-                    showScore();
-                    for (var i = 0; i < 5; i++){
-                        questionDiv.removeChild(questionDiv.firstChild);
+                    var correctAnswer = document.createElement("p");
+                    correctAnswer.textContent = "Correct!";
+                    correctAnswer.setAttribute('id', 'correct-answer');
+                    questionDiv.appendChild(correctAnswer);
+
+                    var questionTime = 1;
+                    var timer = setInterval(function() {
+                    questionTime--;
+                    if(questionTime === 0) {
+                        question.remove();
+                        showScore();
+                        for (var i = 0; i < 5; i++){
+                            questionDiv.removeChild(questionDiv.firstChild);
+                        }
                     }
+                }, 300);
+                setInterval(timer)
                 }
+
                else if (element.matches('.choice')){
-               timeLeft -= 10;
-               question.remove();
-               showScore();
-               for (var i = 0; i < 5; i++){
-                   questionDiv.removeChild(questionDiv.firstChild);
-               }
+                var wrongAnswer = document.createElement("p");
+                wrongAnswer.textContent = "Wrong!";
+                wrongAnswer.setAttribute('id', 'wrong-answer');
+                questionDiv.appendChild(wrongAnswer);
+
+                    var questionTime = 1;
+                    var timer = setInterval(function() {
+                    questionTime--;
+                    if(questionTime === 0) {
+                        timeLeft -= 10;
+                        question.remove();
+                        showScore();
+                        for (var i = 0; i < 5; i++){
+                            questionDiv.removeChild(questionDiv.firstChild);
+                        }
+                    }
+                }, 300);
+                setInterval(timer)
            }
             break;
         }
@@ -223,37 +347,18 @@ function showScore(){
     });
     
 }
-
-
-scoreButton.addEventListener('click', function(){
-       mainEl.remove();
-
        var getUsername =localStorage.getItem('username');
        var getScore = localStorage.getItem('score');
 
-    var scoresHEl = document.createElement('h1');
-    scoresHEl.textContent = 'Saved Highscores'
-    rootEl.appendChild(scoresHEl);
+       function showLastScore(){
+        scoreText.textContent = "Last saved highscore: "+ getUsername + ' - ' + getScore;
+        if (getUsername = ''){
+            scoreText.textContent = "Last saved highscore: 0 ";
+        }
 
-    
-    var highscoreEl = document.createElement('p');
-    highscoreEl.setAttribute('id', 'highscore-text');
-    highscoreEl.textContent = getUsername + ' - ' + getScore;
-    rootEl.appendChild(highscoreEl);
+       }
 
-
-    var exitBtn = document.createElement('button');
-    exitBtn.textContent = "Return";
-    exitBtn.setAttribute('id', 'return-btn');
-    rootEl.appendChild(exitBtn);
-
-    exitBtn.addEventListener('click', function(){
-        location.reload();
-    })
-    // for (var i = 0; i < localStorage.length; i++){
-    // }
-
-})
+    showLastScore()
 
 
 

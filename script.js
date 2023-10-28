@@ -9,6 +9,7 @@ var questionDiv = document.createElement("div");
 
 var timeLeft = 60;
 
+// function to start quiz and set timer
 function startQuiz(){
     var time = document.createElement("p");
     time.textContent = timeLeft;
@@ -54,6 +55,7 @@ for (var i = 1; i < item.length; i++) {
     choice.setAttribute('id', questData[i])
     questionDiv.appendChild(choice);
 }
+// function to create create and append question to the page, wrong answer subtracts 10 seconds from the clock
     questionDiv.addEventListener('click', function(event){
         var element = event.target;
         var state = choice.getAttribute("data-answer");
@@ -273,7 +275,7 @@ for (var i = 1; i < item.length; i++) {
 }
 
 
-
+// fucntion to show score after all question has been answered
 function showScore(){
     var scoreHeader = document.createElement("h2");
     scoreHeader.textContent = "Your score is :";
@@ -288,7 +290,7 @@ function showScore(){
     submitScore.setAttribute('id', 'submit-score');
     mainEl.appendChild(submitScore);
 
-
+// function that creates username input to save to the local storage
     submitScore.addEventListener('click', function(){
         submitScore.remove();
         var userNameInput = document.createElement('input');
@@ -351,11 +353,12 @@ function showScore(){
        var getScore = localStorage.getItem('score');
 
        function showLastScore(){
-        scoreText.textContent = "Last saved highscore: "+ getUsername + ' - ' + getScore;
-        if (getUsername = ''){
-            scoreText.textContent = "Last saved highscore: 0 ";
+           if (getUsername === null){
+               scoreText.textContent = "Last saved highscore: 0";
+            }
+            else {
+            scoreText.textContent = "Last saved highscore: "+ getUsername + ' - ' + getScore;
         }
-
        }
 
     showLastScore()

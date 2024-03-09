@@ -1,0 +1,1162 @@
+[
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(2 + '2');",
+        "answers": [
+            "22",
+            "4",
+            "2",
+            "Error"
+        ],
+        "correct_answer": "22"
+    },
+    {
+        "question": "Which keyword is used to declare a constant in JavaScript?",
+        "answers": [
+            "let",
+            "var",
+            "const",
+            "static"
+        ],
+        "correct_answer": "const"
+    },
+    {
+        "question": "What does the 'NaN' stand for in JavaScript?",
+        "answers": [
+            "Not a Number",
+            "Null and Nothing",
+            "New and Native",
+            "Next Array Number"
+        ],
+        "correct_answer": "Not a Number"
+    },
+    {
+        "question": "Which function is used to parse a string to an integer in JavaScript?",
+        "answers": [
+            "parseInt()",
+            "stringToInt()",
+            "toInteger()",
+            "castToInt()"
+        ],
+        "correct_answer": "parseInt()"
+    },
+    {
+        "question": "What is the result of the expression '3' == 3 in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "undefined",
+            "null"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof undefined);",
+        "answers": [
+            "undefined",
+            "string",
+            "null",
+            "object"
+        ],
+        "correct_answer": "undefined"
+    },
+    {
+        "question": "Which method is used to add an element at the end of an array in JavaScript?",
+        "answers": [
+            "push()",
+            "add()",
+            "append()",
+            "insert()"
+        ],
+        "correct_answer": "push()"
+    },
+    {
+        "question": "What does the '&&' operator do in JavaScript?",
+        "answers": [
+            "Logical AND",
+            "Logical OR",
+            "Bitwise AND",
+            "Bitwise OR"
+        ],
+        "correct_answer": "Logical AND"
+    },
+    {
+        "question": "What is the result of the expression '5' === 5 in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "undefined",
+            "null"
+        ],
+        "correct_answer": "false"
+    },
+    {
+        "question": "Which method is used to remove the last element from an array in JavaScript?",
+        "answers": [
+            "pop()",
+            "remove()",
+            "delete()",
+            "shift()"
+        ],
+        "correct_answer": "pop()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(5 == '5');",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "What does the '||' operator do in JavaScript?",
+        "answers": [
+            "Logical OR",
+            "Logical AND",
+            "Bitwise OR",
+            "Bitwise AND"
+        ],
+        "correct_answer": "Logical OR"
+    },
+    {
+        "question": "Which method is used to join the elements of an array into a string in JavaScript?",
+        "answers": [
+            "join()",
+            "concat()",
+            "merge()",
+            "combine()"
+        ],
+        "correct_answer": "join()"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an array?",
+        "answers": [
+            "object",
+            "array",
+            "arrayobject",
+            "undefined"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What is the result of the expression 'null == undefined' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "null",
+            "undefined"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "Which method is used to find the index of the first occurrence of a value in an array?",
+        "answers": [
+            "indexOf()",
+            "search()",
+            "findIndex()",
+            "contains()"
+        ],
+        "correct_answer": "indexOf()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(2 * '3');",
+        "answers": [
+            "6",
+            "5",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "6"
+    },
+    {
+        "question": "What does the '===' operator do in JavaScript?",
+        "answers": [
+            "Strict Equality",
+            "Loose Equality",
+            "Assigns a value",
+            "None of the above"
+        ],
+        "correct_answer": "Strict Equality"
+    },
+    {
+        "question": "What is the result of the expression 'true && false' in JavaScript?",
+        "answers": [
+            "false",
+            "true",
+            "undefined",
+            "null"
+        ],
+        "correct_answer": "false"
+    },
+    {
+        "question": "Which function is used to execute a function repeatedly at specified intervals?",
+        "answers": [
+            "setInterval()",
+            "setTimeout()",
+            "repeat()",
+            "loop()"
+        ],
+        "correct_answer": "setInterval()"
+    },
+    {
+        "question": "What is the result of the expression '3 != '3'' in JavaScript?",
+        "answers": [
+            "false",
+            "true",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "false"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof NaN);",
+        "answers": [
+            "number",
+            "NaN",
+            "Not a Number",
+            "undefined"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "Which method is used to remove the first element from an array in JavaScript?",
+        "answers": [
+            "shift()",
+            "remove()",
+            "delete()",
+            "pop()"
+        ],
+        "correct_answer": "shift()"
+    },
+    {
+        "question": "What does the 'typeof' operator return for a function?",
+        "answers": [
+            "function",
+            "object",
+            "method",
+            "undefined"
+        ],
+        "correct_answer": "function"
+    },
+    {
+        "question": "What is the result of the expression '3 + true' in JavaScript?",
+        "answers": [
+            "4",
+            "3",
+            "true",
+            "Error"
+        ],
+        "correct_answer": "4"
+    },
+    {
+        "question": "Which method is used to convert a string to lowercase letters in JavaScript?",
+        "answers": [
+            "toLowerCase()",
+            "toLower()",
+            "lowerCase()",
+            "toLowercase()"
+        ],
+        "correct_answer": "toLowerCase()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof []);",
+        "answers": [
+            "object",
+            "array",
+            "undefined",
+            "null"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What does the '!=='' operator do in JavaScript?",
+        "answers": [
+            "Strict Inequality",
+            "Loose Inequality",
+            "Assigns a value",
+            "None of the above"
+        ],
+        "correct_answer": "Strict Inequality"
+    },
+    {
+        "question": "Which method is used to convert a string to uppercase letters in JavaScript?",
+        "answers": [
+            "toUpperCase()",
+            "toUpper()",
+            "upperCase()",
+            "toUppercase()"
+        ],
+        "correct_answer": "toUpperCase()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof true);",
+        "answers": [
+            "boolean",
+            "number",
+            "true",
+            "false"
+        ],
+        "correct_answer": "boolean"
+    },
+    {
+        "question": "What does the '!=' operator do in JavaScript?",
+        "answers": [
+            "Loose Inequality",
+            "Strict Inequality",
+            "Assigns a value",
+            "None of the above"
+        ],
+        "correct_answer": "Loose Inequality"
+    },
+    {
+        "question": "What is the result of the expression '0 == false' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "Which method is used to convert a string to an array in JavaScript?",
+        "answers": [
+            "split()",
+            "toarray()",
+            "toArray()",
+            "separate()"
+        ],
+        "correct_answer": "split()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(5 % 2);",
+        "answers": [
+            "1",
+            "2",
+            "0",
+            "Error"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "What does the 'typeof' operator return for a boolean value?",
+        "answers": [
+            "boolean",
+            "number",
+            "true",
+            "false"
+        ],
+        "correct_answer": "boolean"
+    },
+    {
+        "question": "What is the result of the expression '3 - '2'' in JavaScript?",
+        "answers": [
+            "1",
+            "5",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "Which method is used to round a number to the nearest integer in JavaScript?",
+        "answers": [
+            "Math.round()",
+            "Math.floor()",
+            "Math.ceil()",
+            "Math.trunc()"
+        ],
+        "correct_answer": "Math.round()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof Math);",
+        "answers": [
+            "object",
+            "number",
+            "function",
+            "undefined"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What does the 'typeof' operator return for a number?",
+        "answers": [
+            "number",
+            "numeric",
+            "integer",
+            "NaN"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "What is the result of the expression '5 > 3 && 2 < 4' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "Which method is used to get the length of a string in JavaScript?",
+        "answers": [
+            "length",
+            "size()",
+            "getSize()",
+            "length()"
+        ],
+        "correct_answer": "length"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof Math.PI);",
+        "answers": [
+            "number",
+            "object",
+            "function",
+            "undefined"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "What does the 'typeof' operator return for a null value?",
+        "answers": [
+            "object",
+            "null",
+            "undefined",
+            "string"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What is the result of the expression '5 < 3 || 2 > 4' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "false"
+    },
+    {
+        "question": "Which method is used to get the current date and time in JavaScript?",
+        "answers": [
+            "Date()",
+            "getDate()",
+            "getCurrentDateTime()",
+            "getTime()"
+        ],
+        "correct_answer": "Date()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(5 ** 2);",
+        "answers": [
+            "25",
+            "7",
+            "10",
+            "Error"
+        ],
+        "correct_answer": "25"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an undefined value?",
+        "answers": [
+            "undefined",
+            "object",
+            "null",
+            "string"
+        ],
+        "correct_answer": "undefined"
+    },
+    {
+        "question": "What is the result of the expression '5 >= '5'' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "Which method is used to remove whitespace from both ends of a string in JavaScript?",
+        "answers": [
+            "trim()",
+            "strip()",
+            "removeWhitespace()",
+            "clean()"
+        ],
+        "correct_answer": "trim()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof Infinity);",
+        "answers": [
+            "number",
+            "infinity",
+            "Infinity",
+            "undefined"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an empty array?",
+        "answers": [
+            "object",
+            "array",
+            "undefined",
+            "null"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What is the result of the expression '5 <= 5' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "Which method is used to get the current timestamp in JavaScript?",
+        "answers": [
+            "Date.now()",
+            "currentTime()",
+            "getCurrentTimestamp()",
+            "timestamp()"
+        ],
+        "correct_answer": "Date.now()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(10 / 0);",
+        "answers": [
+            "Infinity",
+            "Error",
+            "NaN",
+            "Undefined"
+        ],
+        "correct_answer": "Infinity"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an empty object?",
+        "answers": [
+            "object",
+            "null",
+            "undefined",
+            "string"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What is the result of the expression '2 + 2 * 3' in JavaScript?",
+        "answers": [
+            "8",
+            "10",
+            "6",
+            "Error"
+        ],
+        "correct_answer": "8"
+    },
+    {
+        "question": "Which method is used to convert a string to a number in JavaScript?",
+        "answers": [
+            "parseFloat()",
+            "toInt()",
+            "toNumber()",
+            "parseNumber()"
+        ],
+        "correct_answer": "parseFloat()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof -Infinity);",
+        "answers": [
+            "number",
+            "infinity",
+            "Infinity",
+            "undefined"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an empty string?",
+        "answers": [
+            "string",
+            "object",
+            "undefined",
+            "null"
+        ],
+        "correct_answer": "string"
+    },
+    {
+        "question": "What is the result of the expression '5 % 2' in JavaScript?",
+        "answers": [
+            "1",
+            "2",
+            "0",
+            "Error"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "Which method is used to get the length of an array in JavaScript?",
+        "answers": [
+            "length",
+            "size()",
+            "getSize()",
+            "length()"
+        ],
+        "correct_answer": "length"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(2 * '3');",
+        "answers": [
+            "6",
+            "5",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "6"
+    },
+    {
+        "question": "What does the 'typeof' operator return for a function?",
+        "answers": [
+            "function",
+            "object",
+            "method",
+            "undefined"
+        ],
+        "correct_answer": "function"
+    },
+    {
+        "question": "What is the result of the expression '3 + true' in JavaScript?",
+        "answers": [
+            "4",
+            "3",
+            "true",
+            "Error"
+        ],
+        "correct_answer": "4"
+    },
+    {
+        "question": "Which method is used to round a number to the nearest integer in JavaScript?",
+        "answers": [
+            "Math.round()",
+            "Math.floor()",
+            "Math.ceil()",
+            "Math.trunc()"
+        ],
+        "correct_answer": "Math.round()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof Math);",
+        "answers": [
+            "object",
+            "number",
+            "function",
+            "undefined"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What does the 'typeof' operator return for a number?",
+        "answers": [
+            "number",
+            "numeric",
+            "integer",
+            "NaN"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "What is the result of the expression '5 > 3 && 2 < 4' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "Which method is used to get the length of a string in JavaScript?",
+        "answers": [
+            "length",
+            "size()",
+            "getSize()",
+            "length()"
+        ],
+        "correct_answer": "length"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof Math.PI);",
+        "answers": [
+            "number",
+            "object",
+            "function",
+            "undefined"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "What does the 'typeof' operator return for a null value?",
+        "answers": [
+            "object",
+            "null",
+            "undefined",
+            "string"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What is the result of the expression '5 < 3 || 2 > 4' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "false"
+    },
+    {
+        "question": "Which method is used to get the current date and time in JavaScript?",
+        "answers": [
+            "Date()",
+            "getDate()",
+            "getCurrentDateTime()",
+            "getTime()"
+        ],
+        "correct_answer": "Date()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(5 ** 2);",
+        "answers": [
+            "25",
+            "7",
+            "10",
+            "Error"
+        ],
+        "correct_answer": "25"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an undefined value?",
+        "answers": [
+            "undefined",
+            "object",
+            "null",
+            "string"
+        ],
+        "correct_answer": "undefined"
+    },
+    {
+        "question": "What is the result of the expression '5 >= '5'' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "Which method is used to remove whitespace from both ends of a string in JavaScript?",
+        "answers": [
+            "trim()",
+            "strip()",
+            "removeWhitespace()",
+            "clean()"
+        ],
+        "correct_answer": "trim()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof Infinity);",
+        "answers": [
+            "number",
+            "infinity",
+            "Infinity",
+            "undefined"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an empty array?",
+        "answers": [
+            "object",
+            "array",
+            "undefined",
+            "null"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What is the result of the expression '5 <= 5' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "Which method is used to get the current timestamp in JavaScript?",
+        "answers": [
+            "Date.now()",
+            "currentTime()",
+            "getCurrentTimestamp()",
+            "timestamp()"
+        ],
+        "correct_answer": "Date.now()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(10 / 0);",
+        "answers": [
+            "Infinity",
+            "Error",
+            "NaN",
+            "Undefined"
+        ],
+        "correct_answer": "Infinity"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an empty object?",
+        "answers": [
+            "object",
+            "null",
+            "undefined",
+            "string"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What is the result of the expression '2 + 2 * 3' in JavaScript?",
+        "answers": [
+            "8",
+            "10",
+            "6",
+            "Error"
+        ],
+        "correct_answer": "8"
+    },
+    {
+        "question": "Which method is used to convert a string to a number in JavaScript?",
+        "answers": [
+            "parseFloat()",
+            "toInt()",
+            "toNumber()",
+            "parseNumber()"
+        ],
+        "correct_answer": "parseFloat()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof -Infinity);",
+        "answers": [
+            "number",
+            "infinity",
+            "Infinity",
+            "undefined"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an empty string?",
+        "answers": [
+            "string",
+            "object",
+            "undefined",
+            "null"
+        ],
+        "correct_answer": "string"
+    },
+    {
+        "question": "What is the result of the expression '5 % 2' in JavaScript?",
+        "answers": [
+            "1",
+            "2",
+            "0",
+            "Error"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "Which method is used to get the length of an array in JavaScript?",
+        "answers": [
+            "length",
+            "size()",
+            "getSize()",
+            "length()"
+        ],
+        "correct_answer": "length"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(2 * '3');",
+        "answers": [
+            "6",
+            "5",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "6"
+    },
+    {
+        "question": "What does the 'typeof' operator return for a function?",
+        "answers": [
+            "function",
+            "object",
+            "method",
+            "undefined"
+        ],
+        "correct_answer": "function"
+    },
+    {
+        "question": "What is the result of the expression '3 + true' in JavaScript?",
+        "answers": [
+            "4",
+            "3",
+            "true",
+            "Error"
+        ],
+        "correct_answer": "4"
+    },
+    {
+        "question": "Which method is used to round a number to the nearest integer in JavaScript?",
+        "answers": [
+            "Math.round()",
+            "Math.floor()",
+            "Math.ceil()",
+            "Math.trunc()"
+        ],
+        "correct_answer": "Math.round()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof Math);",
+        "answers": [
+            "object",
+            "number",
+            "function",
+            "undefined"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What does the 'typeof' operator return for a number?",
+        "answers": [
+            "number",
+            "numeric",
+            "integer",
+            "NaN"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "What is the result of the expression '5 > 3 && 2 < 4' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "Which method is used to get the length of a string in JavaScript?",
+        "answers": [
+            "length",
+            "size()",
+            "getSize()",
+            "length()"
+        ],
+        "correct_answer": "length"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof Math.PI);",
+        "answers": [
+            "number",
+            "object",
+            "function",
+            "undefined"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "What does the 'typeof' operator return for a null value?",
+        "answers": [
+            "object",
+            "null",
+            "undefined",
+            "string"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What is the result of the expression '5 < 3 || 2 > 4' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "false"
+    },
+    {
+        "question": "Which method is used to get the current date and time in JavaScript?",
+        "answers": [
+            "Date()",
+            "getDate()",
+            "getCurrentDateTime()",
+            "getTime()"
+        ],
+        "correct_answer": "Date()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(5 ** 2);",
+        "answers": [
+            "25",
+            "7",
+            "10",
+            "Error"
+        ],
+        "correct_answer": "25"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an undefined value?",
+        "answers": [
+            "undefined",
+            "object",
+            "null",
+            "string"
+        ],
+        "correct_answer": "undefined"
+    },
+    {
+        "question": "What is the result of the expression '5 >= '5'' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "Which method is used to remove whitespace from both ends of a string in JavaScript?",
+        "answers": [
+            "trim()",
+            "strip()",
+            "removeWhitespace()",
+            "clean()"
+        ],
+        "correct_answer": "trim()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof Infinity);",
+        "answers": [
+            "number",
+            "infinity",
+            "Infinity",
+            "undefined"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an empty array?",
+        "answers": [
+            "object",
+            "array",
+            "undefined",
+            "null"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What is the result of the expression '5 <= 5' in JavaScript?",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "Undefined"
+        ],
+        "correct_answer": "true"
+    },
+    {
+        "question": "Which method is used to get the current timestamp in JavaScript?",
+        "answers": [
+            "Date.now()",
+            "currentTime()",
+            "getCurrentTimestamp()",
+            "timestamp()"
+        ],
+        "correct_answer": "Date.now()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(10 / 0);",
+        "answers": [
+            "Infinity",
+            "Error",
+            "NaN",
+            "Undefined"
+        ],
+        "correct_answer": "Infinity"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an empty object?",
+        "answers": [
+            "object",
+            "null",
+            "undefined",
+            "string"
+        ],
+        "correct_answer": "object"
+    },
+    {
+        "question": "What is the result of the expression '2 + 2 * 3' in JavaScript?",
+        "answers": [
+            "8",
+            "10",
+            "6",
+            "Error"
+        ],
+        "correct_answer": "8"
+    },
+    {
+        "question": "Which method is used to convert a string to a number in JavaScript?",
+        "answers": [
+            "parseFloat()",
+            "toInt()",
+            "toNumber()",
+            "parseNumber()"
+        ],
+        "correct_answer": "parseFloat()"
+    },
+    {
+        "question": "What is the output of the following code?\n\nconsole.log(typeof -Infinity);",
+        "answers": [
+            "number",
+            "infinity",
+            "Infinity",
+            "undefined"
+        ],
+        "correct_answer": "number"
+    },
+    {
+        "question": "What does the 'typeof' operator return for an empty string?",
+        "answers": [
+            "string",
+            "object",
+            "undefined",
+            "null"
+        ],
+        "correct_answer": "string"
+    },
+    {
+        "question": "What is the result of the expression '5 % 2' in JavaScript?",
+        "answers": [
+            "1",
+            "2",
+            "0",
+            "Error"
+        ],
+        "correct_answer": "1"
+    }
+]
